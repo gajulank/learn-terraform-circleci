@@ -10,14 +10,13 @@ jobs:
     steps:
       - run:
           command: |
-            echo install terraform 
-            sudo apt install curl
-            curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-            sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-            sudo apt update
-            sudo apt install terraform
-            terraform -v
-            sudo which terraform      
+            echo install terraform
+            cd /home/ubuntu/ 
+            wget https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_linux_amd64.zip
+            unzip terraform_0.14.7_linux_amd64.zip
+            sudo mv ~/home/ubuntu/terraform /usr/bin/
+            which terraform
+                  
       - checkout:
       - run:
           name: terraform init validate & plan
