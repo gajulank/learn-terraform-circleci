@@ -11,10 +11,9 @@ jobs:
       - run:
           command: |
             echo Running test
-            set +e
-            mkdir -p /tmp/test-results
-            make test      
-      - checkout
+            mkdir -p /nandu/test-results
+            pwd      
+      - checkout:
       - run:
           name: terraform init validate & plan
           command: |
