@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "YOUR-UNIQUE-BUCKET-ID"
+    bucket = "circle-ci-backend-nandeesh20220509122242298700000001"
     key    = "terraform/webapp/terraform.tfstate"
     region = "us-east-1"
  }
