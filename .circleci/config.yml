@@ -8,6 +8,12 @@ jobs:
     machine:
       - image: ubuntu-2004:202101-01        
     steps:
+      - run:
+          command: |
+            echo Running test
+            set +e
+            mkdir -p /tmp/test-results
+            make test      
       - checkout
       - run:
           name: terraform init validate & plan
