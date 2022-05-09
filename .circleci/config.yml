@@ -11,7 +11,7 @@ jobs:
       - run:
           command: |
             echo Running test
-            mkdir -p /nandu/test-results
+            sudo mkdir -p /nandu/test-results
             pwd      
       - checkout:
       - run:
