@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket_prefix = "circle-ci-backend-"
+  bucket_prefix = "circle-ci-backend-nandeeshg"
   # Enable versioning so we can see the full revision history of our
   # state files
   force_destroy = true
